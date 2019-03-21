@@ -24,6 +24,13 @@
         </license>
     </licenses>
 
+    <developers>
+        <developer>
+            <name>Bjørn-Andre Skaar</name>
+            <url>https://www.linkedin.com/in/bjørn-andre-skaar-20b56a1/</url>
+        </developer>
+    </developers>
+
     <scm>
         <connection>scm:git:git://github.com/statisticsnorway/linked-data-store-search-provider-api.git</connection>
         <developerConnection>scm:git:git@github.com:statisticsnorway/linked-data-store-search-provider-api.git</developerConnection>
