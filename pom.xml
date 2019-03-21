@@ -24,6 +24,13 @@
         </license>
     </licenses>
 
+    <developers>
+        <developer>
+            <name>Bjørn-Andre Skaar</name>
+            <url>https://www.linkedin.com/in/bjørn-andre-skaar-20b56a1/</url>
+        </developer>
+    </developers>
+
     <scm>
         <connection>scm:git:git://github.com/statisticsnorway/linked-data-store-search-provider-api.git</connection>
         <developerConnection>scm:git:git@github.com:statisticsnorway/linked-data-store-search-provider-api.git</developerConnection>
@@ -46,7 +53,7 @@
     </repositories>
 
     <dependencies>
-        <!-- TODO: Move the json-package to separate API -->
+        <!-- Consider moving the json-package to separate API -->
         <dependency>
             <groupId>no.ssb.lds</groupId>
             <artifactId>linked-data-store-persistence-provider-api</artifactId>
