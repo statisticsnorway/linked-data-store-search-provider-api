@@ -4,7 +4,7 @@
 
     <groupId>no.ssb.lds</groupId>
     <artifactId>linked-data-store-search-provider-api</artifactId>
-    <version>0.2-SNAPSHOT</version>
+    <version>0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>LinkedDataStore Persistence Provider API</name>
@@ -23,13 +23,6 @@
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
-
-    <developers>
-        <developer>
-            <name>Bjørn-Andre Skaar</name>
-            <url>https://www.linkedin.com/in/bjørn-andre-skaar-20b56a1/</url>
-        </developer>
-    </developers>
 
     <scm>
         <connection>scm:git:git://github.com/statisticsnorway/linked-data-store-search-provider-api.git</connection>
@@ -53,7 +46,7 @@
     </repositories>
 
     <dependencies>
-        <!-- Consider moving the json-package to separate API -->
+        <!-- TODO: Move the json-package to separate API -->
         <dependency>
             <groupId>no.ssb.lds</groupId>
             <artifactId>linked-data-store-persistence-provider-api</artifactId>
