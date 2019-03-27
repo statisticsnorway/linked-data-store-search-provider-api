@@ -1,8 +1,10 @@
 package no.ssb.lds.api.search;
 
 import io.reactivex.Completable;
-import io.reactivex.Flowable;
+import io.reactivex.Single;
 import no.ssb.lds.api.persistence.json.JsonDocument;
+
+import java.util.Collection;
 
 /**
  * Common interface for all search index operations
@@ -10,10 +12,16 @@ import no.ssb.lds.api.persistence.json.JsonDocument;
 public interface SearchIndex {
 
     /**
-     * Creates or updates the index with the given Json information
+     * Creates or updates the index with the given json document
      * @param document a json-document representing the entity
      */
     Completable createOrOverwrite(JsonDocument document);
+
+    /**
+     * Creates or updates the index with the given collection of json documents
+     * @param documents a list json-document representing the entities
+     */
+    Completable createOrOverwrite(Collection<JsonDocument> documents);
 
     /**
      * Deletes a given entity from the index
@@ -22,13 +30,18 @@ public interface SearchIndex {
     Completable delete(JsonDocument document);
 
     /**
+     * Deletes all documents from the index.
+     */
+    Completable deleteAll();
+
+    /**
      * Searches the index for the given text.
      *
      * @param text the text to search for
      * @param from the number of initial results that should be skipped, defaults to 0
      * @param size the number of results that should be returned
      *
-     * @return a stream of search result objects
+     * @return search response object
      */
-    Flowable<SearchResult> search(String text, Integer from, Integer size);
+    Single<SearchResponse> search(String text, long from, long size);
 }
