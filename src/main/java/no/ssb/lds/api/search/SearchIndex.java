@@ -5,7 +5,7 @@ import io.reactivex.Single;
 import no.ssb.lds.api.persistence.json.JsonDocument;
 
 import java.util.Collection;
-import java.util.List;
+import java.util.Set;
 
 /**
  * Common interface for all search index operations
@@ -46,5 +46,5 @@ public interface SearchIndex {
      *
      * @return search response object
      */
-    Single<SearchResponse> search(String query, List<String> typeFilter, long from, long size);
+    Single<SearchResponse> search(String query, Set<String> typeFilter, long from, long size);
 }
