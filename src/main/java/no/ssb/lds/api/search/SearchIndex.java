@@ -5,6 +5,7 @@ import io.reactivex.Single;
 import no.ssb.lds.api.persistence.json.JsonDocument;
 
 import java.util.Collection;
+import java.util.List;
 
 /**
  * Common interface for all search index operations
@@ -37,11 +38,13 @@ public interface SearchIndex {
     /**
      * Searches the index for the given text.
      *
-     * @param text the text to search for
+     * @param query query that is passed directly to the search index implementation
+     * @param typeFilter list of entity types that should be filtered. The search should narrow results to only these
+     *                   types
      * @param from the number of initial results that should be skipped, defaults to 0
      * @param size the number of results that should be returned
      *
      * @return search response object
      */
-    Single<SearchResponse> search(String text, long from, long size);
+    Single<SearchResponse> search(String query, List<String> typeFilter, long from, long size);
 }
